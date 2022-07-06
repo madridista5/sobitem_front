@@ -1,0 +1,47 @@
+header {
+    height: 100vh;
+    background-image: url("../../../public/images/shopping3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    animation: photos 12s linear infinite;
+}
+
+@keyframes photos {
+    0% {
+        background-image: url("../../../public/images/shopping3.jpg");
+    }
+
+    20% {
+        background-image: url("../../../public/images/shopping3.jpg");
+    }
+
+    25% {
+        background-image: url("../../../public/images/shopping2.jpg");
+    }
+
+    45% {
+        background-image: url("../../../public/images/shopping2.jpg");
+    }
+
+    50% {
+        background-image: url("../../../public/images/shopping1.jpg");
+    }
+
+    70% {
+        background-image: url("../../../public/images/shopping1.jpg");
+    }
+
+    75% {
+        background-image: url("../../../public/images/shopping4.jpg");
+    }
+
+    95% {
+        background-image: url("../../../public/images/shopping4.jpg");
+    }
+
+    100% {
+        background-image: url("../../../public/images/shopping3.jpg");
+    }
+}

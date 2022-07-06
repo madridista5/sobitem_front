@@ -1,0 +1,67 @@
+.btn-open-app {
+    position: absolute;
+    bottom: 7vh;
+    right: 7vh;
+    cursor: pointer;
+    color: white;
+    border: 2px solid white;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 30px;
+    height: 60px;
+    width: 320px;
+    overflow: hidden;
+    animation: shakes 5s linear infinite;
+}
+
+.btn-open-app span {
+    display: block;
+    position: relative;
+    top: 0;
+    line-height: 60px;
+    text-align: center;
+    transition: 0.4s;
+}
+
+.btn-open-app:hover span {
+    top: -60px;
+}
+
+@keyframes shakes {
+    0% {
+        transform: translateX(0) rotateX(0deg)
+    }
+    90% {
+        transform: translateX(0) rotateX(0deg)
+    }
+    91% {
+        transform: translateX(20px) rotateX(-10deg)
+    }
+    92% {
+        transform: translateX(-20px) rotateX(10deg)
+    }
+    93% {
+        transform: translateX(20px) rotateX(-10deg)
+    }
+    94% {
+        transform: translateX(-20px) rotateX(10deg)
+    }
+    95% {
+        transform: translateX(20px) rotateX(-10deg)
+    }
+    96% {
+        transform: translateX(-20px) rotateX(10deg)
+    }
+    97% {
+        transform: translateX(20px) rotateX(-10deg)
+    }
+    98% {
+        transform: translateX(-20px) rotateX(10deg)
+    }
+    99% {
+        transform: translateX(20px) rotateX(-10deg)
+    }
+    100% {
+        transform: translateX(0) rotateX(0deg)
+    }
+}
