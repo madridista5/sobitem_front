@@ -1,5 +1,6 @@
 .btn-open-app {
-    position: absolute;
+    position: fixed;
+    z-index: 1;
     bottom: 7vh;
     right: 7vh;
     cursor: pointer;

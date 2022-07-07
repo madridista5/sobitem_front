@@ -1,0 +1,36 @@
+.how-to-sell {
+    height: 50vh;
+    display: flex;
+}
+
+.how-to-sell-info {
+    background-color: #009587;
+    flex-basis: 50%;
+    color: white;
+    position: relative;
+}
+
+.how-to-sell-info h2 {
+    font-size: 50px;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.how-to-sell-info p {
+    font-size: 30px;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    margin: 5px 20px;
+    text-align: center;
+}
+
+.how-to-sell-picture {
+    flex-basis: 50%;
+    background-image: url("../../public/images/sell.jpg");
+    background-size: cover;
+    background-position: center;
+}
