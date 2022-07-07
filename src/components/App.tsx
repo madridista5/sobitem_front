@@ -6,6 +6,7 @@ import {Header} from "./Home/Header/Header";
 import {SectionForWhomTheAppIs} from "./Home/SectionForWhomTheAppIs";
 import {SectionHowToSell} from "./Home/SectionHowToSell";
 import {SectionHowToBuy} from "./Home/SectionHowToBuy";
+import {SectionEasyBuying} from "./Home/SectionEasyBuying";
 
 export const App = () => {
 
@@ -15,6 +16,7 @@ export const App = () => {
             <SectionForWhomTheAppIs/>
             <SectionHowToSell/>
             <SectionHowToBuy/>
+            <SectionEasyBuying/>
         </>
     );
 };
