@@ -1,16 +1,16 @@
-.how-to-sell {
+.section-how-to-buy {
     height: 50vh;
     display: flex;
 }
 
-.how-to-sell-info {
-    background-color: #009587;
+.how-to-buy-info {
     flex-basis: 50%;
-    color: white;
+    background-color: #fbe90f;
+    color: #777;
     position: relative;
 }
 
-.how-to-sell-info h2 {
+.how-to-buy-info h2 {
     font-size: 50px;
     position: absolute;
     top: 8vh;
@@ -19,7 +19,7 @@
     text-align: center;
 }
 
-.how-to-sell-info p {
+.how-to-buy-info p {
     font-size: 30px;
     position: absolute;
     top: 20vh;
@@ -28,9 +28,9 @@
     text-align: center;
 }
 
-.how-to-sell-picture {
+.how-to-buy-picture {
     flex-basis: 50%;
-    background-image: url("../../public/images/sell.jpg");
+    background-image: url("../../public/images/buy3.jpg");
     background-size: cover;
     background-position: center;
 }
