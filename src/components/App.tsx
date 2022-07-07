@@ -8,6 +8,7 @@ import {SectionHowToSell} from "./Home/SectionHowToSell";
 import {SectionHowToBuy} from "./Home/SectionHowToBuy";
 import {SectionEasyBuying} from "./Home/SectionEasyBuying";
 import {SectionSearchBar} from "./Home/SectionSearchBar";
+import {SectionMap} from "./Home/SectionMap";
 
 export const App = () => {
 
@@ -19,6 +20,7 @@ export const App = () => {
             <SectionHowToBuy/>
             <SectionEasyBuying/>
             <SectionSearchBar/>
+            <SectionMap/>
         </>
     );
 };
