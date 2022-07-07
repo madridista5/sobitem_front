@@ -7,6 +7,7 @@ import {SectionForWhomTheAppIs} from "./Home/SectionForWhomTheAppIs";
 import {SectionHowToSell} from "./Home/SectionHowToSell";
 import {SectionHowToBuy} from "./Home/SectionHowToBuy";
 import {SectionEasyBuying} from "./Home/SectionEasyBuying";
+import {SectionSearchBar} from "./Home/SectionSearchBar";
 
 export const App = () => {
 
@@ -17,6 +18,7 @@ export const App = () => {
             <SectionHowToSell/>
             <SectionHowToBuy/>
             <SectionEasyBuying/>
+            <SectionSearchBar/>
         </>
     );
 };
