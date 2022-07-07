@@ -1,0 +1,30 @@
+.section-search-bar {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.search-bar-picture {
+    flex-basis: 50%;
+    background-image: url("../../public/images/search_bar2.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.search-bar-info {
+    flex-basis: 50%;
+    background-color: coral;
+    color: white;
+    font-size: 35px;
+}
+
+.search-bar-info h2 {
+    margin: 15px auto;
+    text-align: center;
+}
+
+.search-bar-info p {
+    width: 50vw;
+    margin: 15px auto;
+    text-align: center;
+}

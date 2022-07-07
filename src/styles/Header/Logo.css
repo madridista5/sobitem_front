@@ -1,0 +1,43 @@
+.background-opacity {
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.logo-name {
+    display: flex;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    animation: logo 2s;
+}
+
+.logo {
+    height: 10vh;
+    width: 10vh;
+    background-image: url("../../../public/logo/logo4.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.name {
+    color: coral;
+    font-size: 30px;
+    padding: 5px 15px;
+    height: 50px;
+    border: 2px solid coral;
+    border-radius: 5px;
+    margin: auto auto auto 2vh;
+}
+
+@keyframes logo {
+    0% {
+        top: 5%;
+        left: 100%;
+    }
+
+    100% {
+        top: 5%;
+        left: 5%;
+    }
+}
