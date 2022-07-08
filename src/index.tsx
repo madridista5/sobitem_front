@@ -15,7 +15,7 @@ root.render(
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<App/>}/>
-                <Route path="/start" element={<Start/>}/>
+                <Route path="/start/*" element={<Start/>}/>
                 <Route path="*" element={<ErrorPage/>}/>
             </Routes>
         </BrowserRouter>

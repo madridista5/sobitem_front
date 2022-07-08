@@ -1,10 +1,11 @@
-import React, {useState} from "react";
+import React, {useContext} from "react";
+import {NavLink} from "react-router-dom";
+import {NavContext} from "../../contexts/NavContext";
 
 import '../../styles/Navigation.css';
-import {NavLink} from "react-router-dom";
 
 export const Navigation = () => {
-    const [nav, setNav] = useState<boolean>(false);
+    const {nav, setNav} = useContext(NavContext);
 
     return <>
         <div className="navigation" style={nav ? {left: '0'} : {left: '-300px'}}>
