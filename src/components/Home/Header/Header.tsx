@@ -8,7 +8,7 @@ import {Arrow} from "./Arrow";
 import {BtnOpenApp} from "./BtnOpenApp";
 
 export const Header = () => (
-    <header>
+    <header className="home-header">
         <Logo/>
         <Title/>
         <Arrow/>
