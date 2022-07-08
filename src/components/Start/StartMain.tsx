@@ -4,6 +4,7 @@ import {MainView} from "../Main/MainView";
 import {NavContext} from "../../contexts/NavContext";
 
 import '../../styles/StartMain.css';
+import {AddShopForm} from "../Main/AddShopForm";
 
 export const StartMain = () => {
     const {nav} = useContext(NavContext);
@@ -12,6 +13,7 @@ export const StartMain = () => {
         <div className="main" style={nav ? {marginLeft: '300px'} : {marginLeft: '0'}}>
                 <Routes>
                     <Route path="/" element={<MainView/>}/>
+                    <Route path="/add-shop-form" element={<AddShopForm/>}/>
                 </Routes>
         </div>
     )
