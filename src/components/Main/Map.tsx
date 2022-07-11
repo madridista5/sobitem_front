@@ -7,6 +7,7 @@ import '../../utils/fix-map-icon';
 import {SimpleShopEntity} from 'types';
 import {apiUrl} from "../../config/api";
 import {SearchContext} from "../../contexts/search.context";
+import {SingleShopViewOnTheMap} from "./SingleShopViewOnTheMap";
 
 export const Map = () => {
     const {search} = useContext(SearchContext);
@@ -31,7 +32,7 @@ export const Map = () => {
                     shops.map(shop => (
                         <Marker key={shop.id} position={[shop.lat, shop.lon]}>
                             <Popup>
-                                <p>Podgląd sklepu</p>
+                                <SingleShopViewOnTheMap id={shop.id}/>
                             </Popup>
                         </Marker>
                     ))
