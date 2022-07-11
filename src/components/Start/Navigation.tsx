@@ -1,6 +1,6 @@
 import React, {useContext} from "react";
 import {NavLink} from "react-router-dom";
-import {NavContext} from "../../contexts/NavContext";
+import {NavContext} from "../../contexts/nav.context";
 
 import '../../styles/Navigation.css';
 

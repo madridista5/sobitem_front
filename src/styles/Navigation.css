@@ -28,7 +28,7 @@
 
 .burger {
     position: absolute;
-    bottom: 5vh;
+    top: 15vh;
     right: 5vh;
     font-size: 40px;
     line-height: 50px;
