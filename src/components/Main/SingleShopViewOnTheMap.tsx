@@ -12,7 +12,7 @@ export const SingleShopViewOnTheMap = (props: Props) => {
 
     useEffect(() => {
         (async () => {
-            const resShop = await fetch(`${apiUrl}/shop/${props.id}`);
+            const resShop = await fetch(`${apiUrl}/shop/oneShop/${props.id}`);
             const dataShop = await resShop.json();
             setShop(dataShop);
 
