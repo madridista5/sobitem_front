@@ -37,7 +37,7 @@ export const SingleShopViewOnTheList = (props: Props) => {
             <ul>
                 <h2>Nazwa sklepu: {shop.name}</h2>
                 <p>Kategoria: {shop.category}</p>
-                {shop.url && <p>Adres www: {shop.url}</p>}
+                {shop.url && <p>Adres url: {shop.url}</p>}
                 <p>Adres: {shop.address}</p>
                 <h2>Produkty:</h2>
                 {products.map(product => (<li key={product.id}>Nazwa: {product.name}, Cena: {product.price}, Ilość: {product.count}{product.description && `, Opis: ${product.description}`}</li>))}

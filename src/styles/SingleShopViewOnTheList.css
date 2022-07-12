@@ -1,6 +1,8 @@
 .single-shop-view-wrapper {
     height: 90vh;
-    background-color: #5C4238;
+    background-image: url("../../public/images/shopping.jpg");
+    background-size: cover;
+    background-position: center;
     padding-top: 5vh;
 }
 

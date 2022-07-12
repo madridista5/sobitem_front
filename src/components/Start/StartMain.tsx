@@ -10,6 +10,7 @@ import {Map} from "../Main/Map";
 import {ListOfShops} from "../Main/ListOfShops";
 import {SingleShopViewOnTheList} from "../Main/SingleShopViewOnTheList";
 import {IdContext} from "../../contexts/id.context";
+import {FindProduct} from "../Main/FindProduct";
 
 export const StartMain = () => {
     const {nav} = useContext(NavContext);
@@ -23,6 +24,7 @@ export const StartMain = () => {
                     <Route path="/map" element={<Map/>}/>
                     <Route path="/shops-list" element={<ListOfShops/>}/>
                     <Route path="/singleShopView" element={<SingleShopViewOnTheList id={id}/>}/>
+                    <Route path="/products" element={<FindProduct/>}/>
                     <Route path="*" element={<ErrorMainPage/>}/>
                 </Routes>
         </div>

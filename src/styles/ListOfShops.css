@@ -1,29 +1,7 @@
-/*.list-of-shops-background {*/
-/*    position: relative;*/
-/*    height: 100%;*/
-/*    background-image: url("../../public/images/shopping.jpg");*/
-/*    background-position: center;*/
-/*    background-size: cover;*/
-/*    background-repeat: no-repeat;*/
-/*}*/
-
-/*.opacity-list-of-shops-view {*/
-/*    height: 100%;*/
-/*    background-color: rgba(0, 0, 0, 0.5);*/
-/*}*/
-
-/*.list-of-shops-background ul {*/
-/*    position: absolute;*/
-/*    top: 50%;*/
-/*    left: 50%;*/
-/*    transform: translate(-50%, -50%);*/
-/*    color: white;*/
-/*    font-size: 40px;*/
-/*    list-style: none;*/
-/*}*/
-
 .list-of-shops-wrapper {
-    background-color: #5C4238;
+    background-image: url("../../public/images/shopping.jpg");
+    background-size: cover;
+    background-position: center;
     min-height: 100%;
 }
 
