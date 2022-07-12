@@ -4,6 +4,8 @@ import './styles/index.css';
 import reportWebVitals from './reportWebVitals';
 import {App} from "./components/App";
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
+import {Start} from "./components/Start/Start";
+import {ErrorPage} from "./components/ErrorPage";
 
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
@@ -13,6 +15,8 @@ root.render(
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<App/>}/>
+                <Route path="/start/*" element={<Start/>}/>
+                <Route path="*" element={<ErrorPage/>}/>
             </Routes>
         </BrowserRouter>
     </React.StrictMode>

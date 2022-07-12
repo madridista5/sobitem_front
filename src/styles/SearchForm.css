@@ -1,0 +1,29 @@
+.search-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5vh;
+    background-color: black;
+}
+
+.search-form input {
+    width: 30vw;
+    height: 3vh;
+    font-size: 2vh;
+}
+
+.search-form button {
+    margin-left: 1vw;
+    height: 3vh;
+    padding: 0 1.5vw;
+    cursor: pointer;
+    background-color: coral;
+    border: 2px solid coral;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+.search-form button:hover {
+    background-color: black;
+    color: coral;
+}

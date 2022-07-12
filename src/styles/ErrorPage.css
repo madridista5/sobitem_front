@@ -1,0 +1,23 @@
+.error {
+    position: relative;
+    height: 90vh;
+    background-image: url("../../public/images/shopping.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: 0.4s;
+}
+
+.opacity-error-view {
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.error p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    color: white;
+}
