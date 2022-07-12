@@ -7,7 +7,7 @@
 
 .list-of-shops-wrapper ul {
     margin: 0 auto;
-    width: 50%;
+    width: 40%;
     list-style: none;
     padding-top: 5vh;
 }
@@ -24,6 +24,12 @@
 
 .list-of-shops-wrapper p {
     padding: 1vh 0;
+    background-color: #009587;
+    width: 50%;
+    margin: 1vh auto;
+    border: 2px solid white;
+    border-radius: 4px;
+
 }
 
 .link-show-products {

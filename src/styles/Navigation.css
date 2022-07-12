@@ -40,3 +40,31 @@
 .burger:hover {
     cursor: pointer;
 }
+
+.basket div {
+    position: absolute;
+    right: 5vh;
+    bottom: 5vh;
+    height: 5vw;
+    width: 5vw;
+    background-image: url("../../public/logo/logo6.png");
+    background-position: center;
+    background-size: cover;
+    z-index: 1;
+    transform: rotate(30deg);
+    animation: rotatelogo 0.4s linear infinite alternate;
+}
+
+.basket div:hover {
+    animation-duration: 0.2s;
+}
+
+@keyframes rotatelogo {
+    0% {
+        transform: rotate(30deg);
+    }
+
+    100% {
+        transform: rotate(-30deg);
+    }
+}

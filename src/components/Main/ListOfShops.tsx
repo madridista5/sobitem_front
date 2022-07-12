@@ -23,7 +23,7 @@ export const ListOfShops = () => {
             <ul>
                 {
                     shops.map(shop => (<li key={shop.id} className="li-test">
-                        <p>Nazwa: {shop.name}</p>
+                        <p>{shop.name}</p>
                         <p>Kategoria: {shop.category}</p>
                         {shop.url && <p>Adres url: <a href={shop.url}>{shop.url}</a></p>}
                         <Link to="/start/singleShopView" className="link-show-products" onClick={() => setId(shop.id)}>Zobacz produkty</Link>

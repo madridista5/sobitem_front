@@ -1,5 +1,5 @@
 import React, {useContext} from "react";
-import {NavLink} from "react-router-dom";
+import {Link, NavLink} from "react-router-dom";
 import {NavContext} from "../../contexts/nav.context";
 
 import '../../styles/Navigation.css';
@@ -26,5 +26,6 @@ export const Navigation = () => {
             <i className="fas fa-bars show" style={nav ? {display: 'none'} : {display: 'block'}}/>
             <i className="fas fa-times off" style={nav ? {display: 'block'} : {display: 'none'}}/>
         </div>
+        <Link to="/start/basket" className="basket"><div/></Link>
     </>
 }

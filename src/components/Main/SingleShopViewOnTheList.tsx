@@ -30,12 +30,12 @@ export const SingleShopViewOnTheList = (props: Props) => {
             const dataProd = await resProd.json();
             setProducts(dataProd);
         })();
-    }, []);
+    },[]);
 
     return (
         <div className="single-shop-view-wrapper">
             <ul>
-                <h2>Nazwa sklepu: {shop.name}</h2>
+                <h2>{shop.name}</h2>
                 <p>Kategoria: {shop.category}</p>
                 {shop.url && <p>Adres url: {shop.url}</p>}
                 <p>Adres: {shop.address}</p>
