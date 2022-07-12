@@ -9,9 +9,11 @@ import { ErrorMainPage } from "../Main/ErrorMainPage";
 import {Map} from "../Main/Map";
 import {ListOfShops} from "../Main/ListOfShops";
 import {SingleShopViewOnTheList} from "../Main/SingleShopViewOnTheList";
+import {IdContext} from "../../contexts/id.context";
 
 export const StartMain = () => {
     const {nav} = useContext(NavContext);
+    const {id} = useContext(IdContext);
 
     return (
         <div className="main" style={nav ? {marginLeft: '300px'} : {marginLeft: '0'}}>
@@ -20,7 +22,7 @@ export const StartMain = () => {
                     <Route path="/add-shop-form" element={<AddShopForm/>}/>
                     <Route path="/map" element={<Map/>}/>
                     <Route path="/shops-list" element={<ListOfShops/>}/>
-                    <Route path="/singleShopView" element={<SingleShopViewOnTheList id={'id'}/>}/>
+                    <Route path="/singleShopView" element={<SingleShopViewOnTheList id={id}/>}/>
                     <Route path="*" element={<ErrorMainPage/>}/>
                 </Routes>
         </div>
