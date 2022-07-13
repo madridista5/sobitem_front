@@ -29,6 +29,13 @@ export const Basket = () => {
         })();
     }
 
+    const clearBasket = () => {
+        (async () => {
+            await fetch(`${apiUrl}/basket/clear-basket`);
+            setProductsInBasket([]);
+        })();
+    }
+
     return (
         <div className="basket-wrapper">
             <div className="basket-content">
@@ -54,7 +61,7 @@ export const Basket = () => {
                     </tbody>
                 </table>
                 <h2>Suma: {sum} zł.</h2>
-                <Link to="bought-info" className="btn-buy-now">Kup teraz</Link>
+                <Link to="bought-info" className="btn-buy-now" onClick={clearBasket}>Kup teraz</Link>
             </div>
         </div>
     );

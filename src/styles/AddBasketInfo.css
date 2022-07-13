@@ -13,7 +13,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     height: 50%;
-    width: 40%;
+    width: 60%;
     background-color: coral;
     border: 3px solid white;
     border-radius: 10px;
@@ -36,6 +36,7 @@
     border: 2px solid white;
     border-radius: 5px;
     transition: 0.3s;
+    background-color: #009587;
 }
 
 .add-basket-info-container a:nth-of-type(1) {
@@ -49,5 +50,5 @@
 }
 
 .add-basket-info-container a:hover {
-    background-color: #009587;
+    background-color: black;
 }

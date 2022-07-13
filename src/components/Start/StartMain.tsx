@@ -13,6 +13,7 @@ import {IdContext} from "../../contexts/id.context";
 import {FindProduct} from "../Main/FindProduct";
 import { Basket } from "../Main/Basket";
 import {AddBasketInfo} from "../Main/AddBasketInfo";
+import {BuyAllInfo} from "../Main/BuyAllInfo";
 
 export const StartMain = () => {
     const {nav} = useContext(NavContext);
@@ -29,6 +30,7 @@ export const StartMain = () => {
                     <Route path="/products" element={<FindProduct/>}/>
                     <Route path="/basket" element={<Basket/>}/>
                     <Route path="/add-basket-info" element={<AddBasketInfo/>}/>
+                    <Route path="/basket/bought-info" element={<BuyAllInfo/>}/>
                     <Route path="*" element={<ErrorMainPage/>}/>
                 </Routes>
         </div>
