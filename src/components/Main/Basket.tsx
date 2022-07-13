@@ -54,7 +54,7 @@ export const Basket = () => {
                             <td>{product.name}</td>
                             <td>{product.price} zł</td>
                             <td>
-                                <Link to="/remove-from-basket-info" onClick={() => removeItem(product.id)}>Usuń z koszyka</Link>
+                                <Link to="/start/remove-from-basket-info" onClick={() => removeItem(product.id)}>Usuń z koszyka</Link>
                             </td>
                         </tr>))
                     }
