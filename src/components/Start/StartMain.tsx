@@ -12,6 +12,7 @@ import {SingleShopViewOnTheList} from "../Main/SingleShopViewOnTheList";
 import {IdContext} from "../../contexts/id.context";
 import {FindProduct} from "../Main/FindProduct";
 import { Basket } from "../Main/Basket";
+import {AddBasketInfo} from "../Main/AddBasketInfo";
 
 export const StartMain = () => {
     const {nav} = useContext(NavContext);
@@ -27,6 +28,7 @@ export const StartMain = () => {
                     <Route path="/singleShopView" element={<SingleShopViewOnTheList id={id}/>}/>
                     <Route path="/products" element={<FindProduct/>}/>
                     <Route path="/basket" element={<Basket/>}/>
+                    <Route path="/add-basket-info" element={<AddBasketInfo/>}/>
                     <Route path="*" element={<ErrorMainPage/>}/>
                 </Routes>
         </div>

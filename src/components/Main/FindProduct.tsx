@@ -49,7 +49,7 @@ export const FindProduct = () => {
                             <td>{product.price} zł</td>
                             <td>{product.count}</td>
                             <td>{product.description}</td>
-                            <td><Link to="/add-basket-info">Dodaj do koszyka</Link></td>
+                            <td><Link to="/start/add-basket-info">Dodaj do koszyka</Link></td>
                         </tr>))
                     }
                     </tbody>
