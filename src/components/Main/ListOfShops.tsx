@@ -20,16 +20,28 @@ export const ListOfShops = () => {
 
     return (
         <div className="list-of-shops-wrapper">
-            <ul>
-                {
-                    shops.map(shop => (<li key={shop.id} className="li-test">
-                        <p>{shop.name}</p>
-                        <p>Kategoria: {shop.category}</p>
-                        {shop.url && <p>Adres url: <a href={shop.url}>{shop.url}</a></p>}
-                        <Link to="/start/singleShopView" className="link-show-products" onClick={() => setId(shop.id)}>Zobacz produkty</Link>
-                    </li>))
-                }
-            </ul>
+            <div className="list-of-shops-content">
+                <table className="table-list-of-shops">
+                    <thead>
+                    <tr>
+                        <th>Nazwa sklepu</th>
+                        <th>Kategoria sklepu</th>
+                        <th>Akcja</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {
+                        shops.map(shop => (<tr key={shop.id}>
+                            <td>{shop.name}</td>
+                            <td>{shop.category} zł</td>
+                            <td>
+                                <Link to="/start/singleShopView" className="link-show-products" onClick={() => setId(shop.id)}>Zobacz produkty</Link>
+                            </td>
+                        </tr>))
+                    }
+                    </tbody>
+                </table>
+            </div>
         </div>
     );
 }
