@@ -14,6 +14,7 @@ export const Navigation = () => {
         {name: 'Lista sklepów', path: '/start/shops-list'},
         {name: 'Znajdź produkt', path: '/start/products'},
         {name: 'Mapa', path: '/start/map'},
+        {name: 'Koszyk', path: '/start/basket'},
     ];
 
     return <>

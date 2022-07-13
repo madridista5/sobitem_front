@@ -2,7 +2,7 @@ import React, {useContext, useEffect, useState} from "react";
 import {SearchForm} from "./SearchForm";
 
 import '../../styles/FindProduct.css';
-import { GetListOfProductsResponse } from "types";
+import {GetListOfProductsResponse, GetOneProductResponse} from "types";
 import {apiUrl} from "../../config/api";
 import {SearchContext} from "../../contexts/search.context";
 import {Link} from "react-router-dom";
@@ -28,6 +28,23 @@ export const FindProduct = () => {
         })();
     }, [search]);
 
+    const handleClick = (product: GetOneProductResponse) => {
+        (async () => {
+            await fetch(`${apiUrl}/basket`, {
+                method: 'POST',
+                headers: {
+                    'Content-type': 'application/json',
+                },
+                body: JSON.stringify({
+                    name: product.name,
+                    price: Number(product.price),
+                    count: 1,
+                    productId: product.id,
+                }),
+            });
+        })();
+    }
+
     return (
         <>
             <SearchForm/>
@@ -49,7 +66,12 @@ export const FindProduct = () => {
                             <td>{product.price} zł</td>
                             <td>{product.count}</td>
                             <td>{product.description}</td>
-                            <td><Link to="/start/add-basket-info">Dodaj do koszyka</Link></td>
+                            <td>
+                                <Link
+                                    to="/start/add-basket-info"
+                                    onClick={() => handleClick(product)}
+                                >Dodaj do koszyka</Link>
+                            </td>
                         </tr>))
                     }
                     </tbody>
