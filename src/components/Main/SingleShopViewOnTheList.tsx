@@ -34,14 +34,35 @@ export const SingleShopViewOnTheList = (props: Props) => {
 
     return (
         <div className="single-shop-view-wrapper">
-            <ul>
+            <div className="single-shop-content">
                 <h2>{shop.name}</h2>
                 <p>Kategoria: {shop.category}</p>
                 {shop.url && <p>Adres url: {shop.url}</p>}
                 <p>Adres: {shop.address}</p>
                 <h2>Produkty:</h2>
-                {products.map(product => (<li key={product.id}>Nazwa: {product.name}, Cena: {product.price}, Ilość: {product.count}{product.description && `, Opis: ${product.description}`}</li>))}
-            </ul>
+                {/*{products.map(product => (<li key={product.id}>Nazwa: {product.name}, Cena: {product.price}, Ilość: {product.count}{product.description && `, Opis: ${product.description}`}</li>))}*/}
+
+                <table className="table-single-shop">
+                    <thead>
+                    <tr>
+                        <th>Nazwa produktu</th>
+                        <th>Cena prdutku</th>
+                        <th>Opis produktu</th>
+                        <th>ilość</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {
+                        products.map(product => (<tr key={product.id}>
+                            <td>{product.name}</td>
+                            <td>{product.price} zł</td>
+                            <td>{product.description}</td>
+                            <td>{product.count}</td>
+                        </tr>))
+                    }
+                    </tbody>
+                </table>
+            </div>
         </div>
     );
 }
