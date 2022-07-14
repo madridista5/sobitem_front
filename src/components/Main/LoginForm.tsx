@@ -24,25 +24,25 @@ export const LoginForm = () => {
     }
 
     return (
-        <div className="login-form-wrapper">
-            <div className="login-form-content">
-                <h2>Logowanie</h2>
-                <form action="/start/confirm/login" onSubmit={handleForm}>
-                    <input
-                        type="email"
-                        placeholder="email"
-                        onChange={e => setEmail(e.target.value)}
-                        value={email}
-                    />
-                    <input
-                        type="password"
-                        placeholder="hasło"
-                        onChange={e => setPass(e.target.value)}
-                        value={pass}
-                    />
-                    <button>Zaloguj</button>
-                </form>
+            <div className="login-form-wrapper">
+                <div className="login-form-content">
+                    <h2>Logowanie</h2>
+                    <form onSubmit={handleForm}>
+                        <input
+                            type="email"
+                            placeholder="email"
+                            onChange={e => setEmail(e.target.value)}
+                            value={email}
+                        />
+                        <input
+                            type="password"
+                            placeholder="hasło"
+                            onChange={e => setPass(e.target.value)}
+                            value={pass}
+                        />
+                        <button>Zaloguj</button>
+                    </form>
+                </div>
             </div>
-        </div>
     )
 }

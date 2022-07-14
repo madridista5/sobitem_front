@@ -15,11 +15,11 @@ export const Start = () => {
         <NavContext.Provider value={{nav, setNav}}>
             <SearchContext.Provider value={{search, setSearch}}>
                 <IdContext.Provider value={{id, setId}}>
-                    <div className="start-wrapper">
-                        <StartHeader/>
-                        <Navigation/>
-                        <StartMain/>
-                    </div>
+                        <div className="start-wrapper">
+                            <StartHeader/>
+                            <Navigation/>
+                            <StartMain/>
+                        </div>
                 </IdContext.Provider>
             </SearchContext.Provider>
         </NavContext.Provider>
