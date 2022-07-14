@@ -17,6 +17,7 @@ import {BuyAllInfo} from "../Main/BuyAllInfo";
 import { RemoveFromBasketInfo } from "../Main/RemoveFromBasketInfo";
 import {RegistrationForm} from "../Main/RegistrationForm";
 import {RegistrationConfirmInfo} from "../Main/RegistrationConfirmInfo";
+import {LoginForm} from "../Main/LoginForm";
 
 export const StartMain = () => {
     const {nav} = useContext(NavContext);
@@ -37,6 +38,7 @@ export const StartMain = () => {
                     <Route path="/remove-from-basket-info" element={<RemoveFromBasketInfo/>}/>
                     <Route path="/registration" element={<RegistrationForm/>}/>
                     <Route path="/confirm/registration" element={<RegistrationConfirmInfo/>}/>
+                    <Route path="/login" element={<LoginForm/>}/>
                     <Route path="*" element={<ErrorMainPage/>}/>
                 </Routes>
         </div>
