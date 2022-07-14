@@ -42,7 +42,6 @@ export const AddProductToShopForm = () => {
                     />
                     <input
                         type="number"
-                        placeholder="Cena"
                         onChange={e => setPrice(Number(e.target.value))}
                         value={price}
                     />
