@@ -10,8 +10,8 @@ export const StartHeader = () => (
             <div className="start-header-sobitem">SoB item</div>
         </Link>
         <div className="registration-wrap">
-            <Link className="login" to="/login">Logowanie</Link>
-            <Link className="registration" to="/registration">Rejestracja</Link>
+            <Link className="login" to="/start/login">Logowanie</Link>
+            <Link className="registration" to="/start/registration">Rejestracja</Link>
         </div>
     </header>
 );

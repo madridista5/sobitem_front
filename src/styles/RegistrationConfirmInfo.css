@@ -1,0 +1,43 @@
+.registration-confirm-wrapper {
+    height: 90vh;
+    background-image: url("../../public/images/shopping.jpg");
+    background-size: cover;
+    background-position: center;
+    padding-top: 15vh;
+    color: white;
+}
+
+.registration-confirm-content {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 60%;
+    margin: 0 auto;
+    border: 3px solid black;
+    border-radius: 10px;
+}
+
+.registration-confirm-content p {
+    text-align: center;
+    padding: 5vh;
+    font-size: 4vh;
+}
+
+.registration-confirm-content a {
+    display: block;
+    width: 30%;
+    padding: 1vh 0;
+    text-align: center;
+    border: 2px solid coral;
+    border-radius: 5px;
+    color: coral;
+    margin: 7vh auto;
+    text-decoration: none;
+    font-size: 3vh;
+    background-color: black;
+    transition: 0.3s;
+}
+
+.registration-confirm-content a:hover {
+    background-color: coral;
+    color: white;
+    border-color: white;
+}

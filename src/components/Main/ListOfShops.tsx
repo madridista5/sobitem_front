@@ -27,6 +27,7 @@ export const ListOfShops = () => {
                         <th>Nazwa sklepu</th>
                         <th>Kategoria sklepu</th>
                         <th>Akcja</th>
+                        <th>Akcja</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -36,6 +37,9 @@ export const ListOfShops = () => {
                             <td>{shop.category} zł</td>
                             <td>
                                 <Link to="/start/singleShopView" className="link-show-products" onClick={() => setId(shop.id)}>Zobacz produkty</Link>
+                            </td>
+                            <td>
+                                <Link to="/start/addProductToShop" className="link-show-products" onClick={() => setId(shop.id)}>Dodaj produkt</Link>
                             </td>
                         </tr>))
                     }

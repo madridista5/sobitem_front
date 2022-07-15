@@ -32,6 +32,7 @@ export const FindProduct = () => {
         (async () => {
             await fetch(`${apiUrl}/basket`, {
                 method: 'POST',
+                // credentials: 'include',
                 headers: {
                     'Content-type': 'application/json',
                 },
