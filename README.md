@@ -1,3 +1,8 @@
+Wrzuciłem aplikacje tutaj:
+https://sobitem.tlossy.networkmanager.pl/
+Można zobaczyć tam front, ale niestety mam problem z backendem. Z jakiegoś powodu przy próbie łaczenia z bazą danych leci kod błędu 503.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
