@@ -2,10 +2,12 @@ import React, {SyntheticEvent, useState} from "react";
 
 import '../../styles/LoginForm.css';
 import {apiUrl} from "../../config/api";
+import { LoginFormInfo } from "./LoginFormInfo";
 
 export const LoginForm = () => {
     const [email, setEmail] = useState<string>('');
     const [pass, setPass] = useState<string>('');
+    const [isSentForm, setIsSentForm] = useState<boolean>(false);
 
     const handleForm = (e: SyntheticEvent) => {
         e.preventDefault();
@@ -20,7 +22,12 @@ export const LoginForm = () => {
                     pwd: pass,
                 }),
             });
+            setIsSentForm(true);
         })();
+    }
+
+    if(isSentForm) {
+        return <LoginFormInfo/>;
     }
 
     return (
