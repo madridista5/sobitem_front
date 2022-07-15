@@ -3,6 +3,7 @@ import React, {useContext, useState} from "react";
 import '../../styles/AddProductToShopForm.css';
 import {IdContext} from "../../contexts/id.context";
 import {apiUrl} from "../../config/api";
+import {AddProductToShopFormInfo} from "./AddProductToShopFormInfo";
 
 export const AddProductToShopForm = () => {
     const {id} = useContext(IdContext);
@@ -10,6 +11,7 @@ export const AddProductToShopForm = () => {
     const [price, setPrice] = useState<number>(0);
     const [count, setCount] = useState<number>(0);
     const [description, setDescription] = useState<string>('');
+    const [isSentForm, setIsSentForm] = useState<boolean>(false);
 
     const handleForm = () => {
         (async () => {
@@ -26,7 +28,12 @@ export const AddProductToShopForm = () => {
                     shopId: id,
                 }),
             });
+            setIsSentForm(true);
         })();
+    }
+
+    if(isSentForm) {
+        return <AddProductToShopFormInfo/>;
     }
 
     return (
@@ -40,11 +47,13 @@ export const AddProductToShopForm = () => {
                         onChange={e => setName(e.target.value)}
                         value={name}
                     />
+                    <p>Cena:</p>
                     <input
                         type="number"
                         onChange={e => setPrice(Number(e.target.value))}
                         value={price}
                     />
+                    <p>Ilość:</p>
                     <input
                         type="number"
                         placeholder="Ilość"

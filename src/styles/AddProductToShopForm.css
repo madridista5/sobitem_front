@@ -24,12 +24,16 @@
 
 .add-prod-to-basket-form-content input {
     display: block;
-    margin: 5vh auto 0;
-    width: 40%;
+    margin: 0 auto 3vh;
+    width: 50%;
     font-size: 4vh;
     background-color: #999;
     border: 2px solid black;
     border-radius: 5px;
+}
+
+.add-prod-to-basket-form-content p {
+    text-align: center;
 }
 
 .add-prod-to-basket-form-content button {
