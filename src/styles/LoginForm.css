@@ -1,0 +1,51 @@
+.login-form-wrapper {
+    height: 90vh;
+    background-image: url("../../public/images/shopping.jpg");
+    background-size: cover;
+    background-position: center;
+    padding-top: 15vh;
+    color: white;
+}
+
+.login-form-content {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 60%;
+    margin: 0 auto;
+    border: 3px solid black;
+    border-radius: 10px;
+}
+
+.login-form-content h2 {
+    text-align: center;
+    padding: 5vh;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.login-form-content input {
+    display: block;
+    margin: 5vh auto 0;
+    width: 40%;
+    font-size: 4vh;
+    background-color: #999;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.login-form-content button {
+    display: block;
+    padding: 1vh 3vh;
+    border: 2px solid coral;
+    border-radius: 5px;
+    color: coral;
+    margin: 7vh auto;
+    font-size: 3vh;
+    background-color: black;
+    transition: 0.3s;
+}
+
+.login-form-content button:hover {
+    background-color: coral;
+    color: white;
+    border-color: white;
+}

@@ -1,0 +1,54 @@
+.section-easy-buying {
+    height: 100vh;
+    background-image: url("../../public/images/buy2.jpg");
+    position: relative;
+}
+
+.section-easy-buying-black {
+  height: 100vh;
+    background-color: black;
+    opacity: 0.4;
+}
+
+.section-easy-buying p {
+    position: absolute;
+    color: white;
+    font-size: 30px;
+    width: 500px;
+    text-align: center;
+    animation: slogans 6s linear infinite;
+    opacity: 0;
+}
+
+.section-easy-buying p:nth-of-type(1) {
+    top: 10vw;
+    right: 10vw;
+}
+
+.section-easy-buying p:nth-of-type(2) {
+    bottom: 10vw;
+    left: 10vw;
+    animation-delay: 3s;
+}
+
+@keyframes slogans {
+    0% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}

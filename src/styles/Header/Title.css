@@ -1,0 +1,51 @@
+.title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+.title p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 100px;
+    opacity: 0;
+    animation: text 12s linear infinite;
+}
+
+.title p:nth-of-type(2) {
+    animation-delay: 3s;
+}
+
+.title p:nth-of-type(3) {
+    animation-delay: 6s;
+}
+
+.title p:nth-of-type(4) {
+    animation-delay: 9s;
+}
+
+@keyframes text {
+    0% {
+        opacity: 1;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 0;
+    }
+
+    95% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

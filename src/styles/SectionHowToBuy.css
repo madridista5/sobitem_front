@@ -1,0 +1,36 @@
+.section-how-to-buy {
+    height: 50vh;
+    display: flex;
+}
+
+.how-to-buy-info {
+    flex-basis: 50%;
+    background-color: #fbe90f;
+    color: #777;
+    position: relative;
+}
+
+.how-to-buy-info h2 {
+    font-size: 50px;
+    position: absolute;
+    top: 8vh;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.how-to-buy-info p {
+    font-size: 30px;
+    position: absolute;
+    top: 20vh;
+    left: 0;
+    margin: 5px 20px;
+    text-align: center;
+}
+
+.how-to-buy-picture {
+    flex-basis: 50%;
+    background-image: url("../../public/images/buy3.jpg");
+    background-size: cover;
+    background-position: center;
+}

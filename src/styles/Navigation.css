@@ -1,0 +1,70 @@
+.navigation {
+    position: absolute;
+    top: 10vh;
+    bottom: 0;
+    left: -300px;
+    width: 300px;
+    background-color: coral;
+    padding: 20px 20px;
+    transition: 0.4s;
+}
+
+.navigation a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 5px 10px;
+    transition: 0.4s;
+}
+
+.navigation a:hover {
+    transform: translateX(30px);
+}
+
+.navigation a.active {
+    color: black;
+}
+
+.burger {
+    position: absolute;
+    top: 15vh;
+    right: 5vh;
+    font-size: 40px;
+    line-height: 50px;
+    transition: 0.3s;
+    color: coral;
+    z-index: 1;
+}
+
+.burger:hover {
+    cursor: pointer;
+}
+
+.basket div {
+    position: absolute;
+    right: 5vh;
+    bottom: 5vh;
+    height: 5vw;
+    width: 5vw;
+    background-image: url("../../public/logo/logo6.png");
+    background-position: center;
+    background-size: cover;
+    z-index: 1;
+    transform: rotate(30deg);
+    animation: rotatelogo 0.4s linear infinite alternate;
+}
+
+.basket div:hover {
+    animation-duration: 0.2s;
+}
+
+@keyframes rotatelogo {
+    0% {
+        transform: rotate(30deg);
+    }
+
+    100% {
+        transform: rotate(-30deg);
+    }
+}

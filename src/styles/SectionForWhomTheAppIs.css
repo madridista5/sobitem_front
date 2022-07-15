@@ -1,0 +1,39 @@
+.section-for-whom {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.for-whom-info {
+    position: relative;
+}
+
+.for-whom-info h2 {
+    position: absolute;
+    top: 2vh;
+    left: 5vw;
+    font-size: 70px;
+}
+
+.for-whom-info div {
+    position: absolute;
+    top: 15vh;
+    left: 40vw;
+    margin-right: 30px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.for-whom-info {
+    flex-basis: 40vh;
+    background-color: coral;
+    color: white;
+}
+
+.for-whom-picture {
+    flex-basis: 60vh;
+    background-image: url("../../public/images/forWhom.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}

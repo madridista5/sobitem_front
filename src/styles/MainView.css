@@ -1,0 +1,50 @@
+.main-view {
+    position: relative;
+    height: 100%;
+    background-image: url("../../public/images/shopping.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.opacity-main-view {
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.main-view p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 10vh;
+    opacity: 0;
+    animation: mainSlogan 4s infinite;
+}
+
+@keyframes mainSlogan {
+    0% {
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 1;
+    }
+
+    60% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}

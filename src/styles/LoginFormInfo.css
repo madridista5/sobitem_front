@@ -1,0 +1,22 @@
+.login-form-info-wrapper {
+    height: 90vh;
+    background-image: url("../../public/images/shopping.jpg");
+    background-size: cover;
+    background-position: center;
+    padding-top: 15vh;
+    color: white;
+}
+
+.login-form-info-content {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 60%;
+    margin: 0 auto;
+    border: 3px solid black;
+    border-radius: 10px;
+}
+
+.login-form-info-content p {
+    text-align: center;
+    padding: 5vh;
+    font-size: 4vh;
+}
