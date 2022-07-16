@@ -1,18 +1,20 @@
-import React, {SyntheticEvent, useState} from "react";
+import React, {SyntheticEvent, useContext, useState} from "react";
 
 import '../../styles/LoginForm.css';
 import {apiUrl} from "../../config/api";
-import { LoginFormInfo } from "./LoginFormInfo";
+import {LoginContext} from "../../contexts/login.context";
+import {LoginFormInfo} from "./LoginFormInfo";
 
 export const LoginForm = () => {
     const [email, setEmail] = useState<string>('');
     const [pass, setPass] = useState<string>('');
     const [isSentForm, setIsSentForm] = useState<boolean>(false);
+    const {setLogin} = useContext(LoginContext);
 
     const handleForm = (e: SyntheticEvent) => {
         e.preventDefault();
         (async () => {
-            await fetch(`${apiUrl}/auth/login`, {
+            const res = await fetch(`${apiUrl}/auth/login`, {
                 method: 'POST',
                 credentials: 'include',
                 headers: {
@@ -23,12 +25,14 @@ export const LoginForm = () => {
                     pwd: pass,
                 }),
             });
+            const data = await res.json();
+            setLogin(data.ok);
             setIsSentForm(true);
         })();
     }
 
     if(isSentForm) {
-        return <LoginFormInfo/>;
+        return <LoginFormInfo email={email}/>;
     }
 
     return (

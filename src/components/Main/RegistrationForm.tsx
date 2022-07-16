@@ -4,11 +4,13 @@ import '../../styles/RegistrationForm.css';
 import {apiUrl} from "../../config/api";
 import {RegisterUserResponse} from "types";
 import {RegistrationConfirmInfo} from "./RegistrationConfirmInfo";
+import {IncorrectEmailInfo} from "./IncorrectEmailInfo";
 
 export const RegistrationForm = () => {
     const [email, setEmail] = useState<string>('');
     const [pass, setPass] = useState<string>('');
     const [isSentForm, setIsSentForm] = useState<boolean>(false);
+    const [incorrectEmail, setIncorrectEmail] = useState<boolean>(false);
 
     const handleForm = (e: SyntheticEvent) => {
         e.preventDefault();
@@ -27,11 +29,15 @@ export const RegistrationForm = () => {
             if (user.id) {
                 setIsSentForm(true);
             }
+            setIncorrectEmail(true);
         })();
     }
 
     if (isSentForm) {
         return <RegistrationConfirmInfo userEmail={email}/>;
+    }
+    if(incorrectEmail) {
+        return <IncorrectEmailInfo email={email}/>;
     }
 
     return (
