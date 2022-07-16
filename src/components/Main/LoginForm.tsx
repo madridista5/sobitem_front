@@ -14,6 +14,7 @@ export const LoginForm = () => {
         (async () => {
             await fetch(`${apiUrl}/auth/login`, {
                 method: 'POST',
+                credentials: 'include',
                 headers: {
                     'Content-type': 'application/json',
                 },

@@ -7,7 +7,9 @@ export const Logout = () => {
 
     useEffect(() => {
         (async () => {
-            await fetch(`${apiUrl}/auth/logout`);
+            await fetch(`${apiUrl}/auth/logout`, {
+                credentials: 'include',
+            });
         })();
     }, []);
 

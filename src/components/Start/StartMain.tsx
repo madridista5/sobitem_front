@@ -16,7 +16,6 @@ import {AddBasketInfo} from "../Main/AddBasketInfo";
 import {BuyAllInfo} from "../Main/BuyAllInfo";
 import { RemoveFromBasketInfo } from "../Main/RemoveFromBasketInfo";
 import {RegistrationForm} from "../Main/RegistrationForm";
-import {RegistrationConfirmInfo} from "../Main/RegistrationConfirmInfo";
 import {LoginForm} from "../Main/LoginForm";
 import {Logout} from "../Main/Logout";
 import {AddProductToShopForm} from "../Main/AddProductToShopForm";
@@ -40,7 +39,6 @@ export const StartMain = () => {
                     <Route path="/basket/bought-info" element={<BuyAllInfo/>}/>
                     <Route path="/remove-from-basket-info" element={<RemoveFromBasketInfo/>}/>
                     <Route path="/registration" element={<RegistrationForm/>}/>
-                    <Route path="/confirm/registration" element={<RegistrationConfirmInfo/>}/>
                     <Route path="/login" element={<LoginForm/>}/>
                     <Route path="/logout" element={<Logout/>}/>
                     <Route path="/addProductToShop" element={<AddProductToShopForm/>}/>

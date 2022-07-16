@@ -15,6 +15,7 @@ export const Navigation = () => {
         {name: 'Znajdź produkt', path: '/start/products'},
         {name: 'Mapa', path: '/start/map'},
         {name: 'Koszyk', path: '/start/basket'},
+        {name: 'Wyloguj', path: '/start/logout'},
     ];
 
     return <>

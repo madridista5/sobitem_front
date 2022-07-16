@@ -2,31 +2,43 @@ import React, {SyntheticEvent, useState} from "react";
 
 import '../../styles/RegistrationForm.css';
 import {apiUrl} from "../../config/api";
+import {RegisterUserResponse} from "types";
+import {RegistrationConfirmInfo} from "./RegistrationConfirmInfo";
 
 export const RegistrationForm = () => {
     const [email, setEmail] = useState<string>('');
     const [pass, setPass] = useState<string>('');
+    const [isSentForm, setIsSentForm] = useState<boolean>(false);
 
-    const handleForm = () => {
+    const handleForm = (e: SyntheticEvent) => {
+        e.preventDefault();
         (async () => {
-            await fetch(`${apiUrl}/user/register`, {
+            const res = await fetch(`${apiUrl}/user/register`, {
                 method: 'POST',
                 headers: {
                     'Content-type': 'application/json',
                 },
                 body: JSON.stringify({
-                   email,
-                   pwd: pass,
+                    email,
+                    pwd: pass,
                 }),
             });
+            const user: RegisterUserResponse = await res.json();
+            if (user.id) {
+                setIsSentForm(true);
+            }
         })();
+    }
+
+    if (isSentForm) {
+        return <RegistrationConfirmInfo userEmail={email}/>;
     }
 
     return (
         <div className="registration-wrapper">
             <div className="registration-content">
                 <h2>Rejestracja</h2>
-                <form action="/start/confirm/registration" onSubmit={handleForm}>
+                <form onSubmit={handleForm}>
                     <input
                         type="email"
                         placeholder="email"
