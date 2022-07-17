@@ -3,20 +3,26 @@ import {Link, NavLink} from "react-router-dom";
 import {NavContext} from "../../contexts/nav.context";
 
 import '../../styles/Navigation.css';
+import {LoginContext} from "../../contexts/login.context";
 
 export const Navigation = () => {
     const {nav, setNav} = useContext(NavContext);
+    const {login} = useContext(LoginContext);
 
     const list = [
-        {name: 'Home Page', path: '/'},
         {name: 'Start', path: '/start', end: true},
-        {name: 'Dodaj swój sklep', path: '/start/add-shop-form'},
         {name: 'Lista sklepów', path: '/start/shops-list'},
         {name: 'Znajdź produkt', path: '/start/products'},
         {name: 'Mapa', path: '/start/map'},
         {name: 'Koszyk', path: '/start/basket'},
-        {name: 'Wyloguj', path: '/start/logout'},
     ];
+
+    if (login) {
+        list.push(
+            {name: 'Dodaj swój sklep', path: '/start/add-shop-form'},
+            {name: 'Wyloguj', path: '/start/logout'},
+        );
+    }
 
     return <>
         <div className="navigation" style={nav ? {left: '0'} : {left: '-300px'}}>
@@ -28,6 +34,8 @@ export const Navigation = () => {
             <i className="fas fa-bars show" style={nav ? {display: 'none'} : {display: 'block'}}/>
             <i className="fas fa-times off" style={nav ? {display: 'block'} : {display: 'none'}}/>
         </div>
-        <Link to="/start/basket" className="basket"><div/></Link>
+        <Link to="/start/basket" className="basket">
+            <div/>
+        </Link>
     </>
 }

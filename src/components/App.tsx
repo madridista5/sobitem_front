@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useContext, useEffect} from 'react';
 
 import '../styles/App.css';
 
@@ -11,7 +11,6 @@ import {SectionSearchBar} from "./Home/SectionSearchBar";
 import {SectionMap} from "./Home/SectionMap";
 
 export const App = () => {
-
     return (
         <>
             <Header/>

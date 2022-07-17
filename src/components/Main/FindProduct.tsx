@@ -6,10 +6,12 @@ import {GetListOfProductsResponse, GetOneProductResponse} from "types";
 import {apiUrl} from "../../config/api";
 import {SearchContext} from "../../contexts/search.context";
 import {Link} from "react-router-dom";
+import {LoginContext} from "../../contexts/login.context";
 
 export const FindProduct = () => {
     const [products, setProducts] = useState<GetListOfProductsResponse>([]);
     const {search, setSearch} = useContext(SearchContext);
+    const {login} = useContext(LoginContext);
 
     useEffect(() => {
         (async () => {
@@ -29,10 +31,15 @@ export const FindProduct = () => {
     }, [search]);
 
     const handleClick = (product: GetOneProductResponse) => {
+        if(!login) {
+            alert('Nie jesteś zalogowany! ');
+            return;
+        }
+
         (async () => {
             await fetch(`${apiUrl}/basket`, {
                 method: 'POST',
-                // credentials: 'include',
+                credentials: 'include',
                 headers: {
                     'Content-type': 'application/json',
                 },
