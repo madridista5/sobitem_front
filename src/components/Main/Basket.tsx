@@ -1,13 +1,16 @@
-import React, {useEffect, useState} from "react";
+import React, {useContext, useEffect, useState} from "react";
 import {ListProductsInBasketResponse} from "types";
 
 import '../../styles/Basket.css';
 import {apiUrl} from "../../config/api";
 import {Link} from "react-router-dom";
+import {LoginContext} from "../../contexts/login.context";
+import {NotLogin} from "./NotLogin";
 
 export const Basket = () => {
     const [productsInBasket, setProductsInBasket] = useState<ListProductsInBasketResponse>([]);
     const [sum, setSum] = useState<number>(0);
+    const {login} = useContext(LoginContext);
 
     useEffect(() => {
         (async () => {
@@ -34,6 +37,10 @@ export const Basket = () => {
             await fetch(`${apiUrl}/basket/clear-basket`);
             setProductsInBasket([]);
         })();
+    }
+
+    if(!login) {
+        return <NotLogin/>;
     }
 
     return (
