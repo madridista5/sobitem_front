@@ -40,7 +40,7 @@ export const Basket = () => {
     }
 
     if(!login) {
-        return <NotLogin/>;
+        return <NotLogin info="Aby móc zobaczyć swój koszyk musisz się zalogować."/>;
     }
 
     return (

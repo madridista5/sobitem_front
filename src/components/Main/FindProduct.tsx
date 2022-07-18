@@ -31,11 +31,6 @@ export const FindProduct = () => {
     }, [search]);
 
     const handleClick = (product: GetOneProductResponse) => {
-        if(!login) {
-            alert('Nie jesteś zalogowany! ');
-            return;
-        }
-
         (async () => {
             await fetch(`${apiUrl}/basket`, {
                 method: 'POST',
