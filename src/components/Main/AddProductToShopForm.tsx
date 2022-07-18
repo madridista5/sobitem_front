@@ -4,9 +4,12 @@ import '../../styles/AddProductToShopForm.css';
 import {IdContext} from "../../contexts/id.context";
 import {apiUrl} from "../../config/api";
 import {AddProductToShopFormInfo} from "./AddProductToShopFormInfo";
+import {LoginContext} from "../../contexts/login.context";
+import {NotLogin} from "./NotLogin";
 
 export const AddProductToShopForm = () => {
     const {id} = useContext(IdContext);
+    const {login} = useContext(LoginContext);
     const [name, setName] = useState<string>('');
     const [price, setPrice] = useState<number>(0);
     const [count, setCount] = useState<number>(0);
@@ -34,6 +37,10 @@ export const AddProductToShopForm = () => {
 
     if(isSentForm) {
         return <AddProductToShopFormInfo/>;
+    }
+
+    if(!login) {
+        return <NotLogin info="Aby móc dodać produkt do sklepu, musisz być zalogowany."/>;
     }
 
     return (

@@ -14,11 +14,15 @@ export const Basket = () => {
 
     useEffect(() => {
         (async () => {
-            const res = await fetch(`${apiUrl}/basket`);
+            const res = await fetch(`${apiUrl}/basket`, {
+                credentials: 'include',
+            });
             const data = await res.json();
             setProductsInBasket(data);
 
-            const resSum = await fetch(`${apiUrl}/basket/total-price`);
+            const resSum = await fetch(`${apiUrl}/basket/total-price`, {
+                credentials: 'include',
+            });
             const dataSum = await resSum.json();
             setSum(Number(dataSum.sum));
         })();
@@ -28,13 +32,16 @@ export const Basket = () => {
         (async () => {
             await fetch(`${apiUrl}/basket/${id}`, {
                 method: 'DELETE',
+                credentials: 'include',
             });
         })();
     }
 
     const clearBasket = () => {
         (async () => {
-            await fetch(`${apiUrl}/basket/clear-basket`);
+            await fetch(`${apiUrl}/basket/clear-basket`, {
+                credentials: 'include',
+            });
             setProductsInBasket([]);
         })();
     }

@@ -12,7 +12,9 @@ export const ListOfShops = () => {
 
     useEffect(() => {
         (async () => {
-            const res = await fetch(`${apiUrl}/shop/allShops`);
+            const res = await fetch(`${apiUrl}/shop/allShops`, {
+                credentials: 'include',
+            });
             const data = await res.json();
             setShops(data);
         })();
@@ -34,7 +36,7 @@ export const ListOfShops = () => {
                     {
                         shops.map(shop => (<tr key={shop.id}>
                             <td>{shop.name}</td>
-                            <td>{shop.category} zł</td>
+                            <td>{shop.category}</td>
                             <td>
                                 <Link to="/start/singleShopView" className="link-show-products" onClick={() => setId(shop.id)}>Zobacz produkty</Link>
                             </td>

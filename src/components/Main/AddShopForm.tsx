@@ -18,6 +18,7 @@ export const AddShopForm = () => {
             const {lat, lon} = await geocode(address);
             await fetch(`${apiUrl}/shop/add`, {
                 method: 'POST',
+                credentials: 'include',
                 headers: {
                     'Content-type': 'application/json',
                 },
