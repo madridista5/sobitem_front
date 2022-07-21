@@ -43,7 +43,7 @@ export const AddShopForm = () => {
         <div className="add-shop-form-wrapper">
             <div className="add-shop-form-content">
                 <h2>Dodawanie sklepu</h2>
-                <form action="/start/shop-added-info" onSubmit={handleForm}>
+                <form onSubmit={handleForm}>
                     <input
                         type="text"
                         placeholder="Nazwa sklepu"

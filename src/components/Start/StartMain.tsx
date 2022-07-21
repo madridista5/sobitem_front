@@ -19,7 +19,7 @@ import {RegistrationForm} from "../Main/RegistrationForm";
 import {LoginForm} from "../Main/LoginForm";
 import {Logout} from "../Main/Logout";
 import {AddProductToShopForm} from "../Main/AddProductToShopForm";
-import { ConfirmAddProductToShop } from "../Main/ConfirmAddProductToShop";
+import {ListOfShopsLoggedUser} from "../Main/ListOfShopsLoggedUser";
 
 export const StartMain = () => {
     const {nav} = useContext(NavContext);
@@ -42,7 +42,7 @@ export const StartMain = () => {
                     <Route path="/login" element={<LoginForm/>}/>
                     <Route path="/logout" element={<Logout/>}/>
                     <Route path="/addProductToShop" element={<AddProductToShopForm/>}/>
-                    <Route path="/confirm/addProduct" element={<ConfirmAddProductToShop/>}/>
+                    <Route path="/my-shop" element={<ListOfShopsLoggedUser/>}/>
                     <Route path="*" element={<ErrorMainPage/>}/>
                 </Routes>
         </div>

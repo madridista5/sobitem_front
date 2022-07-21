@@ -1,4 +1,4 @@
-import React, {useContext, useState} from "react";
+import React, {SyntheticEvent, useContext, useState} from "react";
 
 import '../../styles/AddProductToShopForm.css';
 import {IdContext} from "../../contexts/id.context";
@@ -16,10 +16,12 @@ export const AddProductToShopForm = () => {
     const [description, setDescription] = useState<string>('');
     const [isSentForm, setIsSentForm] = useState<boolean>(false);
 
-    const handleForm = () => {
+    const handleForm = (e: SyntheticEvent) => {
+        e.preventDefault();
         (async () => {
             await fetch(`${apiUrl}/product/add/${id}`, {
                 method: 'POST',
+                credentials: 'include',
                 headers: {
                     'Content-type': 'application/json',
                 },
@@ -31,8 +33,8 @@ export const AddProductToShopForm = () => {
                     shopId: id,
                 }),
             });
-            setIsSentForm(true);
         })();
+        setIsSentForm(true);
     }
 
     if(isSentForm) {
@@ -47,7 +49,7 @@ export const AddProductToShopForm = () => {
         <div className="add-prod-to-basket-form-wrapper">
             <div className="add-prod-to-basket-form-content">
                 <h2>Dodaj produkt do sklepu</h2>
-                <form action="/start/confirm/addProduct" onSubmit={handleForm}>
+                <form onSubmit={handleForm}>
                     <input
                         type="text"
                         placeholder="Nazwa produtku"
