@@ -2,8 +2,6 @@ import React, {useContext} from "react";
 import { Route, Routes} from "react-router-dom";
 import {MainView} from "../Main/MainView";
 import {NavContext} from "../../contexts/nav.context";
-
-import '../../styles/StartMain.css';
 import {AddShopForm} from "../Main/AddShopForm";
 import { ErrorMainPage } from "../Main/ErrorMainPage";
 import {Map} from "../Main/Map";
@@ -16,11 +14,16 @@ import {AddBasketInfo} from "../Main/AddBasketInfo";
 import {BuyAllInfo} from "../Main/BuyAllInfo";
 import { RemoveFromBasketInfo } from "../Main/RemoveFromBasketInfo";
 import {RegistrationForm} from "../Main/RegistrationForm";
-import {RegistrationConfirmInfo} from "../Main/RegistrationConfirmInfo";
 import {LoginForm} from "../Main/LoginForm";
 import {Logout} from "../Main/Logout";
 import {AddProductToShopForm} from "../Main/AddProductToShopForm";
-import { ConfirmAddProductToShop } from "../Main/ConfirmAddProductToShop";
+import {ListOfShopsLoggedUser} from "../Main/ListOfShopsLoggedUser";
+import {DeletedShopInfo} from "../Main/DeletedShopInfo";
+import {DeletedProductInfo} from "../Main/DeletedProductInfo";
+import {SingleShopViewOnTheListShopOwner} from "../Main/SingleShopViewOnTheListShopOwner";
+import {EditShopForm} from "../Main/EditShopForm";
+
+import '../../styles/StartMain.css';
 
 export const StartMain = () => {
     const {nav} = useContext(NavContext);
@@ -40,11 +43,14 @@ export const StartMain = () => {
                     <Route path="/basket/bought-info" element={<BuyAllInfo/>}/>
                     <Route path="/remove-from-basket-info" element={<RemoveFromBasketInfo/>}/>
                     <Route path="/registration" element={<RegistrationForm/>}/>
-                    <Route path="/confirm/registration" element={<RegistrationConfirmInfo/>}/>
                     <Route path="/login" element={<LoginForm/>}/>
                     <Route path="/logout" element={<Logout/>}/>
                     <Route path="/addProductToShop" element={<AddProductToShopForm/>}/>
-                    <Route path="/confirm/addProduct" element={<ConfirmAddProductToShop/>}/>
+                    <Route path="/my-shop" element={<ListOfShopsLoggedUser/>}/>
+                    <Route path="/deleteShop" element={<DeletedShopInfo/>}/>
+                    <Route path="/deleteProduct" element={<DeletedProductInfo/>}/>
+                    <Route path="/singleShopViewForOwner" element={<SingleShopViewOnTheListShopOwner id={id}/>}/>
+                    <Route path="/editShop" element={<EditShopForm/>}/>
                     <Route path="*" element={<ErrorMainPage/>}/>
                 </Routes>
         </div>

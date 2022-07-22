@@ -1,4 +1,4 @@
-.add-product-to-shop-form-info-wrapper {
+.confirm-delete-shop-wrapper {
     height: 90vh;
     background-image: url("../../public/images/shopping.jpg");
     background-size: cover;
@@ -7,7 +7,7 @@
     color: white;
 }
 
-.add-product-to-shop-form-info-content {
+.confirm-delete-shop-content {
     background-color: rgba(0, 0, 0, 0.7);
     width: 60%;
     margin: 0 auto;
@@ -15,8 +15,9 @@
     border-radius: 10px;
 }
 
-.add-product-to-shop-form-info-content p {
+.confirm-delete-shop-content h2 {
     text-align: center;
     padding: 5vh;
-    font-size: 4vh;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }

@@ -1,17 +1,24 @@
-import React from "react";
+import React, {useContext} from "react";
+import {Link} from "react-router-dom";
+import {LoginContext} from "../../contexts/login.context";
+import {NotLogin} from "./NotLogin";
 
 import '../../styles/AddBasketInfo.css';
-import {Link} from "react-router-dom";
-
 
 export const AddBasketInfo = () => {
+    const {login} = useContext(LoginContext);
+
     return (
-            <div className="add-basket-info-wrapper">
-                <div className="add-basket-info-container">
-                    <p>Produkt został dodany do koszyka</p>
-                    <Link to="/start/products">Kontynuuj zakupy</Link>
-                    <Link to="/start/basket">Koszyk</Link>
+        <>
+            {login ?
+                <div className="add-basket-info-wrapper">
+                    <div className="add-basket-info-container">
+                        <p>Produkt został dodany do koszyka</p>
+                        <Link to="/start/products">Kontynuuj zakupy</Link>
+                        <Link to="/start/basket">Koszyk</Link>
+                    </div>
                 </div>
-            </div>
-    );
+            : <NotLogin info="Aby dodawać przedmioty do koszyka musisz być zalogowany."/>}
+        </>
+    )
 }

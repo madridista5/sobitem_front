@@ -1,0 +1,61 @@
+.edit-shop-form-wrapper {
+    height: 90vh;
+    background-image: url("../../public/images/shopping.jpg");
+    background-size: cover;
+    background-position: center;
+    padding-top: 10vh;
+    color: white;
+}
+
+.edit-shop-form-content {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 60%;
+    margin: 0 auto;
+    border: 3px solid black;
+    border-radius: 10px;
+}
+
+.edit-shop-form-content h2 {
+    text-align: center;
+    padding: 5vh;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.edit-shop-form-content input {
+    display: block;
+    margin: 5vh auto 0;
+    width: 70%;
+    font-size: 3vh;
+    background-color: #999;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.edit-shop-form-content p {
+    text-align: center;
+    margin-top: 5vh;
+    padding: 0 2vw;
+}
+
+.edit-shop-form-content input:nth-of-type(4) {
+    margin-top: 0;
+}
+
+.edit-shop-form-content button {
+    display: block;
+    padding: 1vh 3vh;
+    border: 2px solid coral;
+    border-radius: 5px;
+    color: coral;
+    margin: 7vh auto;
+    font-size: 3vh;
+    background-color: black;
+    transition: 0.3s;
+}
+
+.edit-shop-form-content button:hover {
+    background-color: coral;
+    color: white;
+    border-color: white;
+}

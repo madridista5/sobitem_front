@@ -6,13 +6,13 @@ import {IdContext} from "../../contexts/id.context";
 
 import '../../styles/ListOfShops.css';
 
-export const ListOfShops = () => {
+export const ListOfShopsLoggedUser = () => {
     const [shops, setShops] = useState<ShopEntity[]>([]);
     const {setId} = useContext(IdContext);
 
     useEffect(() => {
         (async () => {
-            const res = await fetch(`${apiUrl}/shop/allShops`, {
+            const res = await fetch(`${apiUrl}/shop/allShopsLoggedUser`, {
                 credentials: 'include',
             });
             const data: ShopEntity[] = await res.json();
@@ -29,6 +29,9 @@ export const ListOfShops = () => {
                         <th>Nazwa sklepu</th>
                         <th>Kategoria sklepu</th>
                         <th>Akcja</th>
+                        <th>Akcja</th>
+                        <th>Akcja</th>
+                        <th>Akcja</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -37,8 +40,22 @@ export const ListOfShops = () => {
                             <td>{shop.name}</td>
                             <td>{shop.category}</td>
                             <td>
-                                <Link to="/start/singleShopView" className="link-show-products"
+                                <Link to="/start/singleShopViewForOwner" className="link-show-products"
                                       onClick={() => setId(shop.id)}>Zobacz produkty</Link>
+                            </td>
+                            <td>
+                                <Link to="/start/addProductToShop" className="link-show-products"
+                                      onClick={() => setId(shop.id)}>Dodaj produkt</Link>
+                            </td>
+                            <td>
+                                <Link to="/start/editShop"
+                                      className="link-show-products"
+                                      onClick={() => setId(shop.id)}>Edytuj sklep</Link>
+                            </td>
+                            <td>
+                                <Link to="/start/deleteShop"
+                                      className="link-show-products"
+                                      onClick={() => setId(shop.id)}>Usuń sklep</Link>
                             </td>
                         </tr>))
                     }

@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import {GetListOfProductsResponse, GetOneShopResponse} from 'types';
 import {apiUrl} from "../../config/api";
+import {Link} from "react-router-dom";
 
 import '../../styles/SingleShopViewOnTheList.css';
 
@@ -8,7 +9,7 @@ interface Props {
     id: string;
 }
 
-export const SingleShopViewOnTheList = (props: Props) => {
+export const SingleShopViewOnTheListShopOwner = (props: Props) => {
     const [shop, setShop] = useState<GetOneShopResponse>({
         id: '',
         name: '',
@@ -32,6 +33,13 @@ export const SingleShopViewOnTheList = (props: Props) => {
         })();
     }, []);
 
+    const deleteProduct = async (id: string) => {
+        await fetch(`${apiUrl}/product/${id}`, {
+            method: 'DELETE',
+            credentials: 'include',
+        });
+    }
+
     return (
         <div className="single-shop-view-wrapper">
             <div className="single-shop-content">
@@ -48,6 +56,7 @@ export const SingleShopViewOnTheList = (props: Props) => {
                         <th>Cena prdutku</th>
                         <th>Opis produktu</th>
                         <th>ilość</th>
+                        <th>Usuń produkt</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -57,6 +66,10 @@ export const SingleShopViewOnTheList = (props: Props) => {
                             <td>{product.price} zł</td>
                             <td>{product.description}</td>
                             <td>{product.count}</td>
+                            <td>
+                                <Link to="/start/deleteProduct" onClick={() => deleteProduct(product.id)}>Usuń
+                                    produkt</Link>
+                            </td>
                         </tr>))
                     }
                     </tbody>

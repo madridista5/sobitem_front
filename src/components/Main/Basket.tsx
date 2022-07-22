@@ -1,21 +1,28 @@
-import React, {useEffect, useState} from "react";
+import React, {useContext, useEffect, useState} from "react";
 import {ListProductsInBasketResponse} from "types";
-
-import '../../styles/Basket.css';
 import {apiUrl} from "../../config/api";
 import {Link} from "react-router-dom";
+import {LoginContext} from "../../contexts/login.context";
+import {NotLogin} from "./NotLogin";
+
+import '../../styles/Basket.css';
 
 export const Basket = () => {
     const [productsInBasket, setProductsInBasket] = useState<ListProductsInBasketResponse>([]);
     const [sum, setSum] = useState<number>(0);
+    const {login} = useContext(LoginContext);
 
     useEffect(() => {
         (async () => {
-            const res = await fetch(`${apiUrl}/basket`);
+            const res = await fetch(`${apiUrl}/basket`, {
+                credentials: 'include',
+            });
             const data = await res.json();
             setProductsInBasket(data);
 
-            const resSum = await fetch(`${apiUrl}/basket/total-price`);
+            const resSum = await fetch(`${apiUrl}/basket/total-price`, {
+                credentials: 'include',
+            });
             const dataSum = await resSum.json();
             setSum(Number(dataSum.sum));
         })();
@@ -25,15 +32,22 @@ export const Basket = () => {
         (async () => {
             await fetch(`${apiUrl}/basket/${id}`, {
                 method: 'DELETE',
+                credentials: 'include',
             });
         })();
     }
 
     const clearBasket = () => {
         (async () => {
-            await fetch(`${apiUrl}/basket/clear-basket`);
+            await fetch(`${apiUrl}/basket/clear-basket`, {
+                credentials: 'include',
+            });
             setProductsInBasket([]);
         })();
+    }
+
+    if(!login) {
+        return <NotLogin info="Aby móc zobaczyć swój koszyk musisz się zalogować."/>;
     }
 
     return (

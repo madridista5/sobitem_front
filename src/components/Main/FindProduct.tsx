@@ -1,11 +1,11 @@
 import React, {useContext, useEffect, useState} from "react";
 import {SearchForm} from "./SearchForm";
-
-import '../../styles/FindProduct.css';
 import {GetListOfProductsResponse, GetOneProductResponse} from "types";
 import {apiUrl} from "../../config/api";
 import {SearchContext} from "../../contexts/search.context";
 import {Link} from "react-router-dom";
+
+import '../../styles/FindProduct.css';
 
 export const FindProduct = () => {
     const [products, setProducts] = useState<GetListOfProductsResponse>([]);
@@ -32,7 +32,7 @@ export const FindProduct = () => {
         (async () => {
             await fetch(`${apiUrl}/basket`, {
                 method: 'POST',
-                // credentials: 'include',
+                credentials: 'include',
                 headers: {
                     'Content-type': 'application/json',
                 },

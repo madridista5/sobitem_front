@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './styles/index.css';
 import reportWebVitals from './reportWebVitals';
 import {App} from "./components/App";
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import {Start} from "./components/Start/Start";
 import {ErrorPage} from "./components/ErrorPage";
+
+import './styles/index.css';
 
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
