@@ -11,8 +11,17 @@ import {SingleShopViewOnTheMap} from "./SingleShopViewOnTheMap";
 import {SearchForm} from "./SearchForm";
 
 export const Map = () => {
-    const {search} = useContext(SearchContext);
+    const {search, setSearch} = useContext(SearchContext);
     const [shops, setShops] = useState<SimpleShopEntity[]>([]);
+
+    useEffect(() => {
+        (async () => {
+            setSearch('');
+            const res = await fetch(`${apiUrl}/shop/allShops/${search}`);
+            const data = await res.json();
+            setShops(data);
+        })();
+    }, []);
 
     useEffect(() => {
         (async () => {
@@ -26,7 +35,7 @@ export const Map = () => {
         <>
             <SearchForm/>
             <div className="map">
-                <MapContainer center={[51.8341211,19.6163938]} zoom={6} scrollWheelZoom={false}>
+                <MapContainer center={[51.8341211,19.6163938]} zoom={6}>
                     <TileLayer
                         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
