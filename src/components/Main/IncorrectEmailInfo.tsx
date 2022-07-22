@@ -6,13 +6,10 @@ interface Props {
     email: string;
 }
 
-export const IncorrectEmailInfo = (props: Props) => {
-
-    return (
-        <div className="incorrect-email-wrapper">
-            <div className="incorrect-email-content">
-                <p>Nie udalo się założyć konta. Email: "{props.email}" jest już zajęty.</p>
-            </div>
+export const IncorrectEmailInfo = (props: Props) => (
+    <div className="incorrect-email-wrapper">
+        <div className="incorrect-email-content">
+            <p>Nie udalo się założyć konta. Email: "{props.email}" jest już zajęty.</p>
         </div>
-    );
-}
+    </div>
+);

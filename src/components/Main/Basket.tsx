@@ -1,11 +1,11 @@
 import React, {useContext, useEffect, useState} from "react";
 import {ListProductsInBasketResponse} from "types";
-
-import '../../styles/Basket.css';
 import {apiUrl} from "../../config/api";
 import {Link} from "react-router-dom";
 import {LoginContext} from "../../contexts/login.context";
 import {NotLogin} from "./NotLogin";
+
+import '../../styles/Basket.css';
 
 export const Basket = () => {
     const [productsInBasket, setProductsInBasket] = useState<ListProductsInBasketResponse>([]);

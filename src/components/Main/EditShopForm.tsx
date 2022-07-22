@@ -2,10 +2,10 @@ import React, {SyntheticEvent, useContext, useEffect, useState} from "react";
 import {IdContext} from "../../contexts/id.context";
 import {geocode} from "../../utils/geocoding";
 import {apiUrl} from "../../config/api";
+import {GetOneShopResponse} from "types";
+import {EditShopFormInfo} from "./EditShopFormInfo";
 
 import '../../styles/EditShopForm.css';
-import { GetOneShopResponse } from "types";
-import {EditShopFormInfo} from "./EditShopFormInfo";
 
 export const EditShopForm = () => {
     const {id} = useContext(IdContext);
@@ -52,7 +52,7 @@ export const EditShopForm = () => {
         setIsSentForm(true);
     }
 
-    if(isSentForm) {
+    if (isSentForm) {
         return <EditShopFormInfo/>;
     }
 
@@ -94,5 +94,4 @@ export const EditShopForm = () => {
             </div>
         </div>
     )
-
 }

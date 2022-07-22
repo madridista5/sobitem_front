@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from "react";
 import {GetListOfProductsResponse, GetOneShopResponse} from 'types';
+import {apiUrl} from "../../config/api";
 
 import '../../styles/SingleShopViewOnTheList.css';
-import {apiUrl} from "../../config/api";
 
 interface Props {
     id: string;
@@ -30,7 +30,7 @@ export const SingleShopViewOnTheList = (props: Props) => {
             const dataProd = await resProd.json();
             setProducts(dataProd);
         })();
-    },[]);
+    }, []);
 
     return (
         <div className="single-shop-view-wrapper">
