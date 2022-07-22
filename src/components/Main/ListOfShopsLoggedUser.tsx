@@ -1,10 +1,10 @@
 import React, {useContext, useEffect, useState} from "react";
 import {ShopEntity} from 'types';
-
-import '../../styles/ListOfShops.css';
 import {apiUrl} from "../../config/api";
 import {Link} from "react-router-dom";
 import {IdContext} from "../../contexts/id.context";
+
+import '../../styles/ListOfShops.css';
 
 export const ListOfShopsLoggedUser = () => {
     const [shops, setShops] = useState<ShopEntity[]>([]);

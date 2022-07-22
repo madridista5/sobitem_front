@@ -1,12 +1,12 @@
 import React, {SyntheticEvent, useContext, useState} from "react";
-
-import '../../styles/RegistrationForm.css';
 import {apiUrl} from "../../config/api";
 import {RegisterUserResponse} from "types";
 import {RegistrationConfirmInfo} from "./RegistrationConfirmInfo";
 import {IncorrectEmailInfo} from "./IncorrectEmailInfo";
 import {LoggedIn} from "./LoggedIn";
 import {LoginContext} from "../../contexts/login.context";
+
+import '../../styles/RegistrationForm.css';
 
 export const RegistrationForm = () => {
     const [email, setEmail] = useState<string>('');
@@ -39,7 +39,7 @@ export const RegistrationForm = () => {
     if (isSentForm) {
         return <RegistrationConfirmInfo userEmail={email}/>;
     }
-    if(incorrectEmail) {
+    if (incorrectEmail) {
         return <IncorrectEmailInfo email={email}/>;
     }
 

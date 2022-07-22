@@ -1,11 +1,11 @@
 import React, {SyntheticEvent, useContext, useState} from "react";
-
-import '../../styles/AddProductToShopForm.css';
 import {IdContext} from "../../contexts/id.context";
 import {apiUrl} from "../../config/api";
 import {AddProductToShopFormInfo} from "./AddProductToShopFormInfo";
 import {LoginContext} from "../../contexts/login.context";
 import {NotLogin} from "./NotLogin";
+
+import '../../styles/AddProductToShopForm.css';
 
 export const AddProductToShopForm = () => {
     const {id} = useContext(IdContext);

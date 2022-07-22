@@ -1,15 +1,15 @@
 import React, {useContext} from "react";
-import { Link } from "react-router-dom";
-
-import '../../styles/StartHeader.css';
+import {Link} from "react-router-dom";
 import {LoginContext} from "../../contexts/login.context";
 import {apiUrl} from "../../config/api";
+
+import '../../styles/StartHeader.css';
 
 export const StartHeader = () => {
     const {login, setLogin} = useContext(LoginContext);
 
     const handleClick = () => {
-        if(login) {
+        if (login) {
             alert('Zostaniesz wylogowany');
             (async () => {
                 await fetch(`${apiUrl}/auth/logout`, {

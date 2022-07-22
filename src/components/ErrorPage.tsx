@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import { NavContext } from "../contexts/nav.context";
+import {NavContext} from "../contexts/nav.context";
 import {Navigation} from "./Start/Navigation";
 import {StartHeader} from "./Start/StartHeader";
 

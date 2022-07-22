@@ -2,8 +2,6 @@ import React, {useContext} from "react";
 import { Route, Routes} from "react-router-dom";
 import {MainView} from "../Main/MainView";
 import {NavContext} from "../../contexts/nav.context";
-
-import '../../styles/StartMain.css';
 import {AddShopForm} from "../Main/AddShopForm";
 import { ErrorMainPage } from "../Main/ErrorMainPage";
 import {Map} from "../Main/Map";
@@ -24,6 +22,8 @@ import {DeletedShopInfo} from "../Main/DeletedShopInfo";
 import {DeletedProductInfo} from "../Main/DeletedProductInfo";
 import {SingleShopViewOnTheListShopOwner} from "../Main/SingleShopViewOnTheListShopOwner";
 import {EditShopForm} from "../Main/EditShopForm";
+
+import '../../styles/StartMain.css';
 
 export const StartMain = () => {
     const {nav} = useContext(NavContext);

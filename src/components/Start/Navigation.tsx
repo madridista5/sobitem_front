@@ -1,9 +1,9 @@
 import React, {useContext} from "react";
 import {Link, NavLink} from "react-router-dom";
 import {NavContext} from "../../contexts/nav.context";
+import {LoginContext} from "../../contexts/login.context";
 
 import '../../styles/Navigation.css';
-import {LoginContext} from "../../contexts/login.context";
 
 export const Navigation = () => {
     const {nav, setNav} = useContext(NavContext);

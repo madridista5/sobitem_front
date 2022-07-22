@@ -32,7 +32,8 @@ export const SingleShopViewOnTheMap = (props: Props) => {
         {!!shop.url && <p>Adres www: <a href={shop.url}>{shop.url}</a></p>}
         <ul>
             {!!products &&
-                products.map(product => (<li key={product.id}>Produkt: {product.name}, Cena: {Number(product.price).toFixed(2)} zł.</li>))
+                products.map(product => (
+                    <li key={product.id}>Produkt: {product.name}, Cena: {Number(product.price).toFixed(2)} zł.</li>))
             }
         </ul>
     </>

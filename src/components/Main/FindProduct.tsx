@@ -1,17 +1,15 @@
 import React, {useContext, useEffect, useState} from "react";
 import {SearchForm} from "./SearchForm";
-
-import '../../styles/FindProduct.css';
 import {GetListOfProductsResponse, GetOneProductResponse} from "types";
 import {apiUrl} from "../../config/api";
 import {SearchContext} from "../../contexts/search.context";
 import {Link} from "react-router-dom";
-import {LoginContext} from "../../contexts/login.context";
+
+import '../../styles/FindProduct.css';
 
 export const FindProduct = () => {
     const [products, setProducts] = useState<GetListOfProductsResponse>([]);
     const {search, setSearch} = useContext(SearchContext);
-    const {login} = useContext(LoginContext);
 
     useEffect(() => {
         (async () => {

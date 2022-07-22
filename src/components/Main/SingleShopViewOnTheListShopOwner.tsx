@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from "react";
 import {GetListOfProductsResponse, GetOneShopResponse} from 'types';
-
-import '../../styles/SingleShopViewOnTheList.css';
 import {apiUrl} from "../../config/api";
 import {Link} from "react-router-dom";
+
+import '../../styles/SingleShopViewOnTheList.css';
 
 interface Props {
     id: string;
@@ -31,7 +31,7 @@ export const SingleShopViewOnTheListShopOwner = (props: Props) => {
             const dataProd = await resProd.json();
             setProducts(dataProd);
         })();
-    },[]);
+    }, []);
 
     const deleteProduct = async (id: string) => {
         await fetch(`${apiUrl}/product/${id}`, {
@@ -67,7 +67,8 @@ export const SingleShopViewOnTheListShopOwner = (props: Props) => {
                             <td>{product.description}</td>
                             <td>{product.count}</td>
                             <td>
-                                <Link to="/start/deleteProduct" onClick={() => deleteProduct(product.id)}>Usuń produkt</Link>
+                                <Link to="/start/deleteProduct" onClick={() => deleteProduct(product.id)}>Usuń
+                                    produkt</Link>
                             </td>
                         </tr>))
                     }

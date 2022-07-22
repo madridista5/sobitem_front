@@ -1,9 +1,9 @@
 import React, {SyntheticEvent, useState} from "react";
-
-import '../../styles/AddShopForm.css';
 import {apiUrl} from "../../config/api";
 import {geocode} from "../../utils/geocoding";
 import {AddShopFormInfo} from "./AddShopFormInfo";
+
+import '../../styles/AddShopForm.css';
 
 export const AddShopForm = () => {
     const [name, setName] = useState<string>('');

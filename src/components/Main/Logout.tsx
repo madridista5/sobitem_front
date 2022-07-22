@@ -1,8 +1,8 @@
 import React, {useContext, useEffect} from "react";
-
-import '../../styles/Logout.css';
 import {apiUrl} from "../../config/api";
 import {LoginContext} from "../../contexts/login.context";
+
+import '../../styles/Logout.css';
 
 export const Logout = () => {
     const {setLogin} = useContext(LoginContext);
