@@ -23,6 +23,7 @@ import {ListOfShopsLoggedUser} from "../Main/ListOfShopsLoggedUser";
 import {DeletedShopInfo} from "../Main/DeletedShopInfo";
 import {DeletedProductInfo} from "../Main/DeletedProductInfo";
 import {SingleShopViewOnTheListShopOwner} from "../Main/SingleShopViewOnTheListShopOwner";
+import {EditShopForm} from "../Main/EditShopForm";
 
 export const StartMain = () => {
     const {nav} = useContext(NavContext);
@@ -49,6 +50,7 @@ export const StartMain = () => {
                     <Route path="/deleteShop" element={<DeletedShopInfo/>}/>
                     <Route path="/deleteProduct" element={<DeletedProductInfo/>}/>
                     <Route path="/singleShopViewForOwner" element={<SingleShopViewOnTheListShopOwner id={id}/>}/>
+                    <Route path="/editShop" element={<EditShopForm/>}/>
                     <Route path="*" element={<ErrorMainPage/>}/>
                 </Routes>
         </div>

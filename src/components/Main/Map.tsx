@@ -35,7 +35,7 @@ export const Map = () => {
         <>
             <SearchForm/>
             <div className="map">
-                <MapContainer center={[51.8341211,19.6163938]} zoom={6} scrollWheelZoom={false}>
+                <MapContainer center={[51.8341211,19.6163938]} zoom={6}>
                     <TileLayer
                         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
