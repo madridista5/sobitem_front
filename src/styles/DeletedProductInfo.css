@@ -1,0 +1,23 @@
+.confirm-delete-prod-wrapper {
+    height: 90vh;
+    background-image: url("../../public/images/shopping.jpg");
+    background-size: cover;
+    background-position: center;
+    padding-top: 15vh;
+    color: white;
+}
+
+.confirm-delete-prod-content {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 60%;
+    margin: 0 auto;
+    border: 3px solid black;
+    border-radius: 10px;
+}
+
+.confirm-delete-prod-content h2 {
+    text-align: center;
+    padding: 5vh;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}

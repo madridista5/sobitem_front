@@ -11,8 +11,17 @@ import {SingleShopViewOnTheMap} from "./SingleShopViewOnTheMap";
 import {SearchForm} from "./SearchForm";
 
 export const Map = () => {
-    const {search} = useContext(SearchContext);
+    const {search, setSearch} = useContext(SearchContext);
     const [shops, setShops] = useState<SimpleShopEntity[]>([]);
+
+    useEffect(() => {
+        (async () => {
+            setSearch('');
+            const res = await fetch(`${apiUrl}/shop/allShops/${search}`);
+            const data = await res.json();
+            setShops(data);
+        })();
+    }, []);
 
     useEffect(() => {
         (async () => {
