@@ -20,7 +20,7 @@ export const Navigation = () => {
     if (login) {
         list.push(
             {name: 'Dodaj swój sklep', path: '/start/add-shop-form'},
-            {name: 'Mój sklep', path: '/start/my-shop'},
+            {name: 'Moje sklepy', path: '/start/my-shop'},
             {name: 'Wyloguj', path: '/start/logout'},
         );
     }
