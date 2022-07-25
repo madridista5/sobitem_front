@@ -1,6 +1,6 @@
 Wrzuciłem aplikacje tutaj:
 https://sobitem.tlossy.networkmanager.pl/
-Można zobaczyć tam front, ale niestety mam problem z backendem. Z jakiegoś powodu nie działają ścieżki wymagające przesłania JWT z frontu na backend.
+Można zobaczyć tam front, ale niestety z jakiegoś powodu nie działają ścieżki wymagające przesłania JWT z frontu na backend.
 
 
 # Getting Started with Create React App
