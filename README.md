@@ -1,61 +1,178 @@
-<h1>Aplikacja działa pod adresem:</h1>
+<h1>The application works at:</h1>
 <br>
 https://sobitem.tlossy.networkmanager.pl/
 <br>
 <br>
-Możesz utworzyć konto dla własnego adresu email, a następnie zalogować się i przetestować jej działanie 🙂
+You can create your own account using your email adress, log in and test how it works 🙂
 <br>
 <br>
-Jeżeli nie chcesz tworzyć wlasnego konta to skorzystaj z testowego:
+If you don't want to create an account you can use the test account:
 <br>
 email: test@gmail.com
 <br>
-hasło: test
+password: test
 
 
-# Getting Started with Create React App
+<div align="center">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  <a href="https://sobitem.tlossy.networkmanager.pl" target="_blank"><img src="https://raw.githubusercontent.com/madridista5/madridista5/main/1_0_GIF_0.GIF" alt="logo" width="400" height="auto" /></a>
+  <h1>SoB item</h1>
+ 
+<h4>
+    
+  </h4>
+</div>
 
-## Available Scripts
+<br />
 
-In the project directory, you can run:
 
-### `npm start`
+- [About the Project](#star2-about-the-project)
+  * [How the application works](#camera-How-the-application-works)
+  * [Tech Stack](#space_invader-tech-stack)
+- [Getting Started](#toolbox-getting-started)
+  * [Prerequisites](#bangbang-prerequisites)
+  * [Run Locally](#running-run-locally)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+  
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<!-- About the Project -->
+## :star2: About the Project
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<!-- Screenshots -->
+### :camera: How the application works
 
-### `npm run build`
+<p>1. First of all you have to open the appliaction:</p>
+<div align="center"> 
+  <img src="https://github.com/madridista5/sobitem_front/blob/main/1.png" alt="screenshot" />
+</div>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<br>
+<p>2. You have to create your account:</p>
+<div align="center"> 
+  <img src="https://github.com/madridista5/sobitem_front/blob/main/2.png" alt="screenshot" />
+</div>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<br>
+<p>3. You have to log in:</p>
+<div align="center"> 
+  <img src="https://github.com/madridista5/sobitem_front/blob/main/3.png" alt="screenshot" />
+</div>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<br>
+<p>4. Now you can open the menu:</p>
+<div align="center"> 
+  <img src="https://github.com/madridista5/sobitem_front/blob/main/4.png" alt="screenshot" />
+</div>
 
-### `npm run eject`
+<br>
+<p>5. The menu is on the left:</p>
+<div align="center"> 
+  <img src="https://github.com/madridista5/sobitem_front/blob/main/5.png" alt="screenshot" />
+</div>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+<br>
+<p>6. You can see a list of the shops:</p>
+<div align="center"> 
+  <img src="https://github.com/madridista5/sobitem_front/blob/main/6.png" alt="screenshot" />
+</div>
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<br>
+<p>7. You can see a list of the products. You can add each product to your basket using the "Dodaj do koszyka" button:</p>
+<div align="center"> 
+  <img src="https://github.com/madridista5/sobitem_front/blob/main/7.png" alt="screenshot" />
+</div>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+<br>
+<p>8. You can see each shop on the map. If you write the name of the product you are looking for in the "search bar" you will see only a list of shops where the product is:</p>
+<div align="center"> 
+  <img src="https://github.com/madridista5/sobitem_front/blob/main/8.png" alt="screenshot" />
+</div>
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+<br>
+<p>9. You can see your basket. You can delete product from basket if you do not want to buy it or click "kup teraz" button and buy all the products in your basket:</p>
+<div align="center"> 
+  <img src="https://github.com/madridista5/sobitem_front/blob/main/9.png" alt="screenshot" />
+</div>
 
-## Learn More
+<br>
+<p>10. You can add your shop:</p>
+<div align="center"> 
+  <img src="https://github.com/madridista5/sobitem_front/blob/main/10.png" alt="screenshot" />
+</div>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<br>
+<p>11. You can see all your shops:</p>
+<p>Here you can also:</p>
+<p> - see all products in your shop </p>
+<p> - add product to your shop </p>
+<p> - edit your shop </p>
+<p> - delete your shop </p>
+<div align="center"> 
+  <img src="https://github.com/madridista5/sobitem_front/blob/main/11.png" alt="screenshot" />
+</div>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+
+<!-- TechStack -->
+### :space_invader: Tech Stack
+
+<details>
+  <summary>Client</summary>
+  <ul>
+    <li><a href="https://www.typescriptlang.org/">Typescript</a></li>
+    <li><a href="https://reactjs.org/">React.js</a></li>
+  </ul>
+</details>
+
+<details>
+  <summary>Server</summary>
+  <ul>
+    <li><a href="https://www.typescriptlang.org/">Typescript</a></li>
+    <li><a href="https://nestjs.com/">Nest.js</a></li>  
+     <li><a href="https://nodejs.org/en/">Node.js</a></li>
+  </ul>
+</details>
+
+<details>
+<summary>Database</summary>
+  <ul>
+    <li><a href="https://typeorm.io">TypeORM</a></li>  
+  </ul>
+</details>
+
+
+<!-- Getting Started -->
+## 	:toolbox: Getting Started
+
+<!-- Prerequisites -->
+### :bangbang: Prerequisites
+
+This project uses npm as package manager
+
+
+<!-- Run Locally -->
+### :running: Run Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/madridista5/sobitem_front.git
+```
+
+Go to the project directory
+
+```bash
+  cd sobitem_front
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the application
+
+```bash
+  react-app-rewired start
+```
